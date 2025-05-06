@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T-shirts</title>
+    <link rel="stylesheet" href="Css/bootstrap.min.css">
+    <link rel="stylesheet" href="Css/style.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <div class="row w-100 ">
+
+                <div class="col-4 d-flex justify-content-start">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <link rel="stylesheet" href="./women js project22/women.html">
+                    <div class="collapse navbar-collapse">
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a class="nav-link text-black" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link text-black"
+                                    href="./Buy-T-shirtandProdDetails/buy-t-shirt/index.html">Buy</a></li>
+                            <li class="nav-item"><a class="nav-link text-black"
+                                    href="./women js project22/women.html">Women</a></li>
+                            <li class="nav-item"><a class="nav-link text-black"
+                                    href="./men project js22/men project js22/men.html">Men</a></li>
+                            <li class="nav-item"><a class="nav-link text-black"
+                                    href="./contact&about/about.html">About</a></li>
+                            <li class="nav-item"><a class="nav-link text-black"
+                                    href="./contact&about/Contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="col-4 text-center">
+                    <a href="#">
+                        <img src="images/logo-regular.png" class="img-fluid" alt="Logo" style="max-height: 50px;">
+                    </a>
+                </div>
+
+                <div class="col-4 text-end d-flex justify-content-end align-items-center gap-3">
+                    <a href="#" class="icon">
+                        <i class="fas fa-search fa-lg"></i>
+                    </a>
+                    <a href="#" class="icon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart"
+                        aria-controls="offcanvasCart">
+                        <i class="fa-solid fa-basket-shopping fa-lg"></i>
+
+                    </a>
+                    <a href="login.html" class="btn btn-sm login-btn">Log in</a>
+
+                </div>
+            </div>
+        </div>
+
+    </nav>
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menu</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav offcanvas-nav">
+                <li class="nav-item"><a class="nav-link text-black" href="./index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link text-black"
+                        href="./Buy-T-shirtandProdDetails/buy-t-shirt/index.html">Buy</a></li>
+                <li class="nav-item"><a class="nav-link text-black" href="./women js project22/women.html">Women</a>
+                </li>
+                <li class="nav-item"><a class="nav-link text-black"
+                        href="./men project js22/men project js22/men.html">Men</a></li>
+                <li class="nav-item"><a class="nav-link text-black" href="./contact&about/about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link text-black" href="./contact&about/Contact.html">Contact</a></li>
+            </ul>
+
+            <a href="login.html" class="btn btn-sm login-btn">Log in</a>
+        </div>
+    </div>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCart" aria-labelledby="offcanvasCartLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasCartLabel">Shopping Cart</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul id="cartItems" class="list-group">
+            </ul>
+            <div class="d-flex justify-content-between mt-3">
+                <strong>Total:</strong>
+                <span id="totalPrice">$0.00</span>
+                <button class="checkout-button" id="checkout-cart">Checkout</button>
+
+            </div>
+        </div>
+    </div>
+    <section class="sec">
+        <div class="container">
+            <div class="row min-vh-100 d-flex align-items-center">
+                <div class="col-lg-3 col-md-6 text-center text-lg-start">
+                    <h1 class="fw-bold">Slick.Modern</h1>
+                    <button type="button" class="btn btn-dark mt-3" id="ShopBtn">Shop Now</button>
+                </div>
+
+                <div class="col-lg-9 col-md-6 d-flex justify-content-center">
+                    <img src="images/hero.png" class="img-fluid hero-img">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class=" header3 container">
+            <div class="row ">
+                <div class="col-lg-10 col-md-6 d-flex justify-content-center">
+                    <h3 class="fw-bold">Popular T-shirts</h3>
+                </div>
+            </div>
+            <section class="container my-5">
+                <div class="row g-4" id="products-container">
+                </div>
+
+            </section>
+            <section class="hidden-BG ">
+                <div class="container ">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h3> Be different in your own way!</h3>
+                            <button type="button" class="btn btn-dark mt-3">Shop Now</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="container my-5">
+                <div class=" header3 container">
+                    <div class="row ">
+                        <div class="col-lg-10 col-md-6 d-flex justify-content-center">
+                            <h3 class="fw-bold">ON SALE T-SHIRTS</h3>
+                        </div>
+                    </div>
+                    <section class="container my-5">
+                        <div class="row g-4" id="products-container3">
+                        </div>
+                    </section>
+            </section>
+
+            <section class="container my-5">
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="category-card">
+                            <a href="./men project js22/men project js22/men.html">
+                                <img src="images/13.jpg" class="img-fluid category-image">
+                                <div class="category-overlay">
+                                    <h3>MEN</h3>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="category-card">
+                            <a href="./women js project22/women.html">
+                                <img src="images/14.jpg" class="img-fluid category-image">
+                                <div class="category-overlay">
+                                    <h3>WOMEN</h3>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer class="footer">
+                <div class="container text-center">
+                    <h5 class="fw-bold text-dark">Subscribe To Get Offers In Your Inbox</h5>
+                    <p class="text-dark">Lorem ipsum dolor sit amet, adipiscing elit sed do eiusmod condimentum</p>
+                    <ul class="footer-links">
+                        <li><a href="./Buy-T-shirtandProdDetails/buy-t-shirt/index.html">Buy</a></li>
+                        <li><a href="./women js project22/women.html">Women</a></li>
+                        <li><a href="./men project js22/men project js22/men.html">Men</a></li>
+                        <li><a href="./contact&about/about.html">About</a></li>
+                        <li><a href="./contact&about/Contact.html">Contact</a></li>
+                    </ul>
+
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="copyright">
+                    <p>&copy; 2025 All Rights Reserved | Your Brand</p>
+                </div>
+            </footer>
+            <script src="JS/bootstrap.bundle.min.js"></script>
+            <script src="JS/script.js"></script>
+</body>
+
+</html>

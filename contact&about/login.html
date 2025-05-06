@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Sign Up</title>
+    <link rel="stylesheet" href="logStyle.css">
+
+</head>
+<body>
+    <div class="container" id="login-container">
+        <h2 id="form-title">Login</h2>
+        <form id="auth-form">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password" required>
+            </div>
+            <button type="submit" class="btn" onclick="navigateToPage()">Submit</button>
+        </form>
+        <p class="toggle-link" id="toggle-link">Don't have an account? Sign Up</p>
+    </div>
+
+    <script>
+        const toggleLink = document.getElementById('toggle-link');
+        const formTitle = document.getElementById('form-title');
+        const authForm = document.getElementById('auth-form');
+
+        toggleLink.addEventListener('click', () => {
+            const isLogin = formTitle.textContent === 'Login';
+
+            formTitle.textContent = isLogin ? 'Sign Up' : 'Login';
+            authForm.innerHTML = isLogin
+                ? `<div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Enter your name" required>
+                   </div>
+                   <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                   </div>
+                   <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Enter your password" required>
+                   </div>
+                   <button type="submit" class="btn">Sign Up</button>`
+                : `<div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                   </div>
+                   <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Enter your password" required>
+                   </div>
+                   <button type="submit" class="btn">Login</button>`;
+
+            toggleLink.textContent = isLogin
+                ? 'Already have an account? Login'
+                : "Don't have an account? Sign Up";
+        });
+
+        function navigateToPage() {
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>
