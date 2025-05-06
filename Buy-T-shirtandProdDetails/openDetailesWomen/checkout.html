@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../Css/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <div class="row w-100 ">
+
+                <div class="col-4 d-flex justify-content-start">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+
+                    <div class="collapse navbar-collapse">
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a class="nav-link text-black" href="../../index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link text-black"
+                                    href="../buy-t-shirt/index.html">Buy</a></li>
+                            <li class="nav-item"><a class="nav-link text-black"
+                                    href="../../women js project22/women.html">Women</a></li>
+                            <li class="nav-item"><a class="nav-link text-black"
+                                    href="../../men project js22/men project js22/men.html">Men</a></li>
+                            <li class="nav-item"><a class="nav-link text-black"
+                                    href="../../contact&about/about.html">About</a></li>
+                            <li class="nav-item"><a class="nav-link text-black"
+                                    href="../../contact&about/Contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="col-4 text-center">
+                    <a href="./index.html">
+                        <img src="../openDetailes/img/logo-retina.png" class="img-fluid" alt="Logo" style="max-height: 50px;">
+                    </a>
+                </div>
+
+                <div class="col-4 text-end d-flex justify-content-end align-items-center gap-3">
+                    <a href="#" class="icon">
+                        <i class="fas fa-search fa-lg"></i>
+                    </a>
+                    <a href="#" class="icon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart"
+                        aria-controls="offcanvasCart">
+                        <i class="fa-solid fa-basket-shopping fa-lg"></i>
+                    </a>
+                    <a href="./login.html" class="btn btn-sm login-btn">Log in</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="checkout-container">
+        <h2 class="checkout-title">Checkout</h2>
+
+        <form id="checkout-form">
+            <div class="checkout-section">
+                <h4 class="section-title">Customer Information</h4>
+                <label class="checkout-label">Username or Email Address *</label>
+                <input type="email" class="checkout-input required" id="checkout-email">
+                <span class="error-message"></span>
+            </div>
+
+            <div class="checkout-section">
+                <h4 class="section-title">Billing Details</h4>
+
+                <label class="checkout-label">First Name *</label>
+                <input type="text" class="checkout-input required" id="checkout-first-name">
+                <span class="error-message"></span>
+
+                <label class="checkout-label">Last Name *</label>
+                <input type="text" class="checkout-input required" id="checkout-last-name">
+                <span class="error-message"></span>
+
+                <label class="checkout-label">Company Name</label>
+                <input type="text" class="checkout-input">
+
+                <label class="checkout-label">Country / Region *</label>
+                <select class="checkout-input required" id="checkout-country">
+                    <option value="">Select Country</option>
+                    <option value="US">United States</option>
+                    <option value="EG">Egypt</option>
+                </select>
+                <span class="error-message"></span>
+
+                <label class="checkout-label">Street Address *</label>
+                <input type="text" class="checkout-input required">
+                <span class="error-message"></span>
+
+                <label class="checkout-label">Apartment, suite, unit, etc. (Optional)</label>
+                <input type="text" class="checkout-input">
+
+                <label class="checkout-label">Town / City *</label>
+                <input type="text" class="checkout-input required" id="checkout-city">
+                <span class="error-message"></span>
+
+                <label class="checkout-label">State *</label>
+                <select class="checkout-input required" id="checkout-state">
+                    <option value="">Select State</option>
+                    <option value="CA">Assiut</option>
+                    <option value="CA">Alexandria</option>
+                    <option value="CA">Cairo</option>
+                    <option value="CA">Qena</option>
+                    <option value="CA">Asswan</option>
+                    <option value="CA">Matro7</option>
+                </select>
+                <span class="error-message"></span>
+
+                <label class="checkout-label">ZIP Code *</label>
+                <input type="text" class="checkout-input required" id="checkout-zip">
+                <span class="error-message"></span>
+
+                <label class="checkout-label">Phone *</label>
+                <input type="text" class="checkout-input required" id="checkout-phone">
+                <span class="error-message"></span>
+            </div>
+
+            <div class="checkout-section">
+                <h4 class="section-title">Additional Information</h4>
+                <label class="checkout-label">Notes about your order</label>
+                <textarea class="checkout-input"></textarea>
+            </div>
+            <a href="checkout.html">
+                <button class="checkout-button" id="checkout-place-order">Place Order</button>
+            </a>
+        </form>
+    </div>
+
+    <footer class="footer">
+        <div class="container text-center">
+            <ul class="footer-links">
+                <li><a href="#">Buy</a></li>
+                <li><a href="#">Women</a></li>
+                <li><a href="#">Men</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 All Rights Reserved | Your Brand</p>
+        </div>
+    </footer>
+    <script src="JS/checkout.js"></script>
+<script src="../../JS/checkout.js"></script>
+</body>
+
+</html>

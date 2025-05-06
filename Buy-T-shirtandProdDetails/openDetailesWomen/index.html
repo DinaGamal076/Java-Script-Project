@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- bootstrap link css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- style css -->
+     <link rel="stylesheet" href="./style.css">
+     <!-- font awsome -->
+     <link rel="stylesheet" href="../../Css/style.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+   <!-- stert nav -->
+   <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+        <div class="row w-100 ">
+
+            <div class="col-4 d-flex justify-content-start">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+
+
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav">
+                      <li class="nav-item"><a class="nav-link text-black" href="../../index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link text-black" href="../buy-t-shirt/index.html">Buy</a></li>
+                        <li class="nav-item"><a class="nav-link text-black" href="../../women js project22/women.html">Women</a></li>
+                        <li class="nav-item"><a class="nav-link text-black" href="../../men project js22/men project js22/men.html">Men</a></li>
+                        <li class="nav-item"><a class="nav-link text-black" href="../../contact&about/about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link text-black" href="../../contact&about/Contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="col-4 text-center">
+                <a href="../../index.html">
+                    <img src="./img/logo-retina.png" class="img-fluid" alt="Logo" style="max-height: 50px;">
+                </a>
+            </div>
+
+            <div class="col-4 text-end d-flex justify-content-end align-items-center gap-3">
+                <a href="#" class="icon">
+                    <i class="fas fa-search fa-lg"></i>
+                </a>
+                <a href="#" class="icon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart"
+                    aria-controls="offcanvasCart">
+                    <i class="fa-solid fa-basket-shopping fa-lg"></i>
+                </a>
+                <a href="../../login.html" class="btn btn-sm login-btn">Log in</a>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+  <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menu</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+          aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+      <ul class="navbar-nav offcanvas-nav">
+          <li class="nav-item"><a class="nav-link text-dark" href="../buy-t-shirt/index.html">Buy</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="../../women js project22/women.html">Women</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="../../men project js22/men project js22/men.html">Men</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="../../contact&about/about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="../../contact&about/Contact.html">Contact</a></li>
+      </ul>
+
+      <a href="../../login.html" class="btn btn-sm login-btn">Log in</a>
+  </div>
+</div>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCart" aria-labelledby="offcanvasCartLabel">
+  <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasCartLabel">Shopping Cart</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+          aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+      <ul id="cartItems" class="list-group">
+      </ul>
+      <div class="d-flex justify-content-between mt-3">
+          <strong>Total:</strong>
+          <span id="totalPrice">$0.00</span>
+      </div>
+  </div>
+</div>
+    <!-- end nav -->
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCart" aria-labelledby="offcanvasCartLabel">
+      <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasCartLabel">Shopping Cart</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+              aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+          <ul id="cartItems" class="list-group">
+          </ul>
+          <div class="d-flex justify-content-between mt-3">
+              <strong>Total:</strong>
+              <span id="totalPrice">$0.00</span>
+              <button class="checkout-button" id="checkout-cart">Checkout</button>
+
+          </div>
+      </div>
+  </div>
+
+     <!-- main -->
+      <main class="container">
+        <div class="  mt-5 row g-4 d-flex justify-content-center align-items-start">
+          <div class="col-12 col-md-6 ">
+              <div class="m-2">
+                  <img class="w-100" src="./img/product-06-a.jpg" alt="Product Image">
+              </div>
+              <div class=" m-2 d-flex">
+                 <img class="w-50 " src="./img/product-001-b-400x488.jpg" alt="">
+                 <img class="w-50 " src="./img/product-01-c-300x366.jpg" alt="">
+              </div>
+              <div class="m-2">
+                <img class="w-50" src="./img/product-01-d-768x936.jpg" alt="">
+              </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div>
+              <div class="d-flex justify-content-between align-items-center">
+                <p class="text-secondary m-0">Women</p>
+                <div>
+                  <i class="fa-solid fa-arrow-left border border-1 p-1 hover"></i>
+                  <i class="fa-solid fa-arrow-right border border-1 p-1 hover"></i>
+                </div>
+              </div>
+          
+              <h2 class="mt-2">T-Shirt Name 10</h2>
+              <p class="text-secondary">
+                <span class="fw-bold text-black">$34.00  </span>
+                 & Free Shipping Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Cras dapibus interdum eros. In blandit velit a lacus laoreet dictum.
+                Maecenas vel vulputate nulla. Ut nec enim vel tortor aliquet varius.
+              </p>
+              <div class="colors">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+              <div class="size d-flex border-bottem">
+                <div class="text-secondary rounded-1 mt-2 me-3 d-flex justify-content-center align-items-center">XS</div>
+                <div class="text-secondary rounded-1 mt-2 me-3 d-flex justify-content-center align-items-center">S</div>
+                <div class="text-secondary rounded-1 mt-2 me-3 d-flex justify-content-center align-items-center">M</div>
+                <div class="text-secondary rounded-1 mt-2 me-3 d-flex justify-content-center align-items-center">L</div>
+              </div>
+              <div class="d-flex border-bottem justify-content-between align-items-center mt-3">
+                <div class="size d-flex">
+                  <div class="text-secondary d-flex justify-content-center align-items-center p-3"><i class="fa-solid fa-minus"></i></div>
+                  <div class="text-secondary d-flex justify-content-center align-items-center p-3">1</div>
+                  <div class="text-secondary d-flex justify-content-center align-items-center p-3"><i class="fa-solid fa-plus"></i></div>
+                </div>
+                <button class="btn text-white bg-gray rounded-0 add-to-cart2" 
+                data-product-title="T-Shirt Name 10" 
+                data-product-price=" 34" >
+                    ADD TO CART </button>
+                      </div>
+              <p class="border-bottem text-secondary mt-3 font-small">
+                SKU: N/A Category:
+                <a class="text-black no-underline">Men</a>
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <p>Description</p>
+                <a class="fs-4 text-black" data-bs-toggle="collapse" href="#collapseDescription" role="button" aria-expanded="false" aria-controls="collapseDescription">
+                  <i class="fa-solid fa-plus"></i>
+                </a>
+              </div>
+          
+              <div class="collapse" id="collapseDescription">
+                <div class="">
+                  <div class="border-bottom">
+                    <h4 class="fs-6">About the product</h4>
+                    <p class="text-secondary font-small">
+                      Our T-Shirts are lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+                    </p>
+                    <ul class="font-small text-secondary">
+                      <li>100% Cotton</li>
+                      <li>260gsm</li>
+                      <li>Breathable Fabric</li>
+                    </ul>
+                  </div>
+                  <div class="border-bottom">
+                    <h4 class="fs-6 text-secondary mt-3">Size & Fit</h4>
+                    <ul class="font-small text-secondary">
+                      <li>Model is wearing size M and is 6'1"</li>
+                      <li>Standard fit for a relaxed, easy feel</li>
+                    </ul>
+                  </div>
+                  <div class="border-bottom">
+                    <h4 class="fs-6 mt-3">Free delivery & returns</h4>
+                    <p class="font-small text-secondary">Free standard delivery on orders over $60.</p>
+                    <ul class="font-small text-secondary">
+                      <li>You can return your order for any reason, free of charge, within 30 days</li>
+                      <li>We also offer a Free-of-Charge shipping label</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+          
+              <div class="d-flex justify-content-between align-items-center">
+                <p>Additional information</p>
+                <a class="fs-4 text-black" data-bs-toggle="collapse" href="#collapseAdditionalInfo" role="button" aria-expanded="false" aria-controls="collapseAdditionalInfo">
+                  <i class="fa-solid fa-plus"></i>
+                </a>
+              </div>
+          
+              <div class="collapse" id="collapseAdditionalInfo">
+                <div class="">
+                  <div class="border-bottom">
+                    <table class="table border">
+                      <tbody>
+                        <tr>
+                          <th scope="row" class="fw-bold">Color</th>
+                          <td class="text-secondary">Black, Orange, White</td>
+                        </tr>
+                        <tr>
+                          <th scope="row" class="fw-bold">Size</th>
+                          <td class="text-secondary">XS, S, M, L, XL</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+          
+              <div class="d-flex justify-content-between align-items-center">
+                <p class="fw-bold mt-3">Reviews (0)</p>
+                <a class="fs-4 text-black" data-bs-toggle="collapse" href="#collapseReviews" role="button" aria-expanded="false" aria-controls="collapseReviews">
+                  <i class="fa-solid fa-plus"></i>
+                </a>
+              </div>
+          
+              <div class="collapse" id="collapseReviews">
+                <div class="font-small text-secondary mt-4">
+                  <p>There are no reviews yet.</p>
+          
+                  <div class="border p-4">
+                    <h5>Be the first to review “T-Shirt Name 10”</h5>
+                    <p class="text-muted">Your email address will not be published. Required fields are marked *</p>
+          
+                    <div class="mb-3">
+                      <label class="form-label fw-bold">Your rating *</label><br>
+                      <i class="far fa-star"></i>
+                      <i class="far fa-star"></i>
+                      <i class="far fa-star"></i>
+                      <i class="far fa-star"></i>
+                      <i class="far fa-star"></i>
+                    </div>
+          
+                    <div class="mb-3">
+                      <label for="review" class="form-label fw-bold">Your review *</label>
+                      <textarea class="form-control" id="review" rows="4"></textarea>
+                    </div>
+          
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label for="name" class="form-label fw-bold">Name *</label>
+                        <input type="text" class="form-control" id="name">
+                      </div>
+                      <div class="col-md-6">
+                        <label for="email" class="form-label fw-bold">Email *</label>
+                        <input type="email" class="form-control" id="email">
+                      </div>
+                    </div>
+          
+                    <div class="form-check mt-3">
+                      <input class="form-check-input" type="checkbox" id="save-info">
+                      <label class="form-check-label" for="save-info">Save my name, email, and website in this browser for the next time I comment.</label>
+                    </div>
+          
+                    <button class="btn btn-dark mt-3 rounded-0">Submit</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </main>
+      <!-- end main -->
+       <!-- related product -->
+        <section class="container mt-5">
+           <h2 class="fw-bolder fs-2">Related products</h2>
+           <div class="row mt-3">
+               <div class="col-12 col-md-6 col-lg-3">
+                  <div>
+                    <img class="w-100"  src="./img/2.jpg" alt="">
+                    <p class="text-secondary font-small mt-2">Women</p>
+                    <p class="h5 fw-bold">
+                      T-Shirt Name 10</p>
+                    <p class="text-secondary font-small fw-bold">$33.00 – $36.00</p>
+                  </div>
+               </div>
+               <div class="col-12 col-md-6 col-lg-3">
+                <div>
+                  <img class="w-100"  src="./img/22.jpg" alt="">
+                  <p class="text-secondary font-small mt-2">Women</p>
+                  <p class="h5 fw-bold">
+                    T-Shirt Name 10</p>
+                  <p class="text-secondary font-small fw-bold">$33.00 – $36.00</p>
+                </div>
+             </div>
+             <div class="col-12 col-md-6 col-lg-3">
+              <div>
+                <img class="w-100"  src="./img/4.jpg" alt="">
+                <p class="text-secondary font-small mt-2">Women</p>
+                <p class="h5 fw-bold">
+                  T-Shirt Name 10</p>
+                <p class="text-secondary font-small fw-bold">$33.00 – $36.00</p>
+              </div>
+           </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                  <div>
+                    <img class="w-100" src="./img/9.jpg" alt="">
+                    <p class="text-secondary font-small mt-2">Women</p>
+                    <p class="h5 fw-bold">
+                      T-Shirt Name 10</p>
+                    <p class="text-secondary font-small fw-bold">$33.00 – $36.00</p>
+                  </div>
+               </div>
+               
+           </div>
+        </section>
+        <!-- end product -->
+         <!-- start footer -->
+         <div class="container">
+          <div class="footer">
+              <h5>Subscribe to get offers in your inbox</h5>
+              <p>Lorem ipsum dolor sit amet, adipiscing elit sed do eiusmod condimentum</p>
+              <ul id="menu">
+                  <li><a href="../buy-t-shirt/index.html">BUY T-SHIRTS</a></li>
+                  <li><a href="../../women js project22/women.html">WOMEN</a></li>
+                  <li><a href="../../men project js22/men project js22/men.html">MEN</a></li>
+                  <li><a href="../../contact&about/about.html">ABOUT</a></li>
+                  <li><a href="../../contact&about/Contact.html">CONTACT</a></li>
+              </ul>
+              <div class="icons">
+                  <div> <i class="fa-brands fa-facebook-f"></i></div>
+                  <div><i class="fa-brands fa-twitter"></i></div>
+                  <div><i class="fa-brands fa-instagram"></i></div>
+              </div>
+              <div class="bottom">
+                  Copyright © 2025 T-Shirts Store | Powered by T-Shirts Store
+              </div>
+          </div>
+      </div>
+          <!-- end footer -->
+           <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> 
+</body>
+</html>
